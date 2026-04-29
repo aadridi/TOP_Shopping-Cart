@@ -1,0 +1,61 @@
+/* Basic reset parameters */
+
+/* 1. Box sizing */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+	margin: 0;
+}
+
+/* 3. Base body */
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* 4. Media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* 5. Form elements inherit fonts */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 6. Remove default list styles */
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+}
+
+/* 7. Remove default link styles */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* 8. Improve text wrapping */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
