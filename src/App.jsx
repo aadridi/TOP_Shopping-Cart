@@ -1,9 +1,10 @@
 import './App.css';
+import Layout from '../src/components/Layout/Layout';
 
 function App() {
 	return (
 		<>
-			<h1>Shopping Cart</h1>
+			<Layout />
 		</>
 	);
 }

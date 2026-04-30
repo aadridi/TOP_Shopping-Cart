@@ -16,6 +16,9 @@
 body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
+	font-family: 'Google Sans', sans-serif;
+	font-optical-sizing: auto;
+	padding: 20px;
 }
 
 /* 4. Media defaults */
