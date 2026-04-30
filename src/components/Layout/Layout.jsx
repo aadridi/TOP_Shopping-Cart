@@ -1,9 +1,10 @@
 import Navbar from '../Navbar/Navbar';
 import Sidebar from '../Sidebar/Sidebar';
 import Footer from '../Footer/Footer';
+import { Outlet } from 'react-router-dom';
 import styles from './Layout.module.css';
 
-const Layout = ({ children}) => {
+const Layout = ({ children }) => {
 	return (
 		<div className={styles.container}>
 			<header className={styles.navbar}>
@@ -14,7 +15,9 @@ const Layout = ({ children}) => {
 				<Sidebar />
 			</aside>
 
-			<main className={styles.main}>{children}</main>
+			<main className={styles.main}>
+				<Outlet />
+			</main>
 
 			<footer className={styles.footer}>
 				<Footer />
