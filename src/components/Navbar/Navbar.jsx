@@ -1,14 +1,18 @@
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
-const Navbar = () => {
+const Navbar = ({ cartItems }) => {
+	const totalItems = cartItems.reduce((sum, currentItem) => sum + (currentItem.quantity || 0), 0);
+
 	return (
-		<div class={styles.navbar}>
-			<Link to='/'>Home</Link>
+		<div className={styles.navbar}>
+			<div>Logo</div>
 
-			<Link to='/shop'>Shop</Link>
-
-			<Link to='/cart'>Cart</Link>
+			<div className={styles.navLinks}>
+				<Link to='/'>Home</Link>
+				<Link to='/shop'>Shop</Link>
+				<Link to='/cart'>Cart ({totalItems || 0})</Link>
+			</div>
 		</div>
 	);
 };

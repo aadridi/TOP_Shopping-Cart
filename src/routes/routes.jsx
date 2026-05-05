@@ -1,3 +1,4 @@
+import App from '../App';
 import Layout from '../components/Layout/Layout';
 
 import Home from '../pages/Home/Home';
@@ -7,7 +8,7 @@ import Cart from '../pages/Cart/Cart';
 const routes = [
 	{
 		path: '/',
-		element: <Layout />,
+		element: <App />,
 		children: [
 			{
 				index: true,

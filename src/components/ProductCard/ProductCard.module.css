@@ -1,0 +1,44 @@
+.cardContainer {
+	display: flex;
+	flex-direction: column;
+	border: 2px solid grey;
+	max-width: 300px;
+	align-items: center;
+	padding: 10px;
+    gap: 10px;
+}
+
+.cardImageContainer {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+    border: 3px solid lightgray;
+}
+
+.cardImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+    transform: scale(0.9);
+}
+
+.cardText {
+	display: flex;
+	flex-direction: column;
+}
+
+.cartText h3 {
+    font-size: 0.9rem;
+}
+
+.cardText p {
+    font-size: 0.7rem;
+}
+
+.cardFooter {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
