@@ -25,9 +25,18 @@ const App = () => {
 		console.log('You added a product to the cart');
 	};
 
+	const updateQuantity = (product, operation) => {
+		const itemInCart = cartItems.find((item) => product.id === item.id);
+		console.log(itemInCart.quantity);
+	};
+
+	const removeFromCart = () => {
+		console.log('Removing this product for the cart...');
+	};
+
 	return (
 		<>
-			<Layout addToCart={addToCart} cartItems={cartItems} />
+			<Layout addToCart={addToCart} cartItems={cartItems} updateQuantity={updateQuantity} removeFromCart={removeFromCart} />
 		</>
 	);
 };

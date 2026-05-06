@@ -4,11 +4,11 @@ import Footer from '../Footer/Footer';
 import { Outlet } from 'react-router-dom';
 import styles from './Layout.module.css';
 
-const Layout = ({ addToCart, cartItems }) => {
+const Layout = ({ addToCart, cartItems, updateQuantity, removeFromCart }) => {
 	return (
 		<div className={styles.container}>
 			<header className={styles.navbar}>
-				<Navbar cartItems={cartItems}/>
+				<Navbar cartItems={cartItems} />
 			</header>
 
 			<aside className={styles.sidebar}>
@@ -16,7 +16,7 @@ const Layout = ({ addToCart, cartItems }) => {
 			</aside>
 
 			<main className={styles.main}>
-				<Outlet context={{ addToCart, cartItems }} />
+				<Outlet context={{ addToCart, cartItems, updateQuantity, removeFromCart }} />
 			</main>
 
 			<footer className={styles.footer}>
