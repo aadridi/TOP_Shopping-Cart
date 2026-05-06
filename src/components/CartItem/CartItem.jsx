@@ -8,14 +8,16 @@ const CartItem = ({ item, updateQuantity, removeFromCart }) => {
 			</div>
 			<div className={styles.cardText}>
 				<h3>{item.title}</h3>
-				<p className={styles.cardTextQuantity}> x {item.quantity}</p>
+				<p className={styles.cardTextQuantity}> Quantity : {item.quantity}</p>
 			</div>
 			<div className={styles.cardFooter}>
 				<p>Prix : {item.price} €</p>
 				<div className={styles.itemQuantity}>
-					<button onClick={() => updateQuantity(item, 'nothing')}>-</button>
-					<button onClick={() => removeFromCart()}>Delete</button>
-					<button onClick={() => updateQuantity(item, 'nothing')}>+</button>
+					<button onClick={() => updateQuantity(item, -1)} disabled={item.quantity === 1}>
+						-
+					</button>
+					<button onClick={() => removeFromCart(item.id)}>Delete</button>
+					<button onClick={() => updateQuantity(item, +1)}>+</button>
 				</div>
 			</div>
 		</div>
