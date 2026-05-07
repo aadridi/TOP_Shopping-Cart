@@ -9,9 +9,10 @@ const Cart = () => {
 			<section>
 				<h1>Cart</h1>
 				<h2>Voici ce que contient votre caddie: </h2>
-				{cartItems.map((item) => (
+				{cartItems.length > 0 && cartItems.map((item) => (
 					<CartItem key={item.id} item={item} updateQuantity={updateQuantity} removeFromCart={removeFromCart} />
 				))}
+				{cartItems.length === 0 && <div>Vous n'avez aucun produit dans votre panier.</div>}
 			</section>
 		</>
 	);
